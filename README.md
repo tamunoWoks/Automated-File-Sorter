@@ -23,3 +23,12 @@ If additional file types need to be sorted, users can add new folder mappings by
 ## Requirements
 - Python 3.6 or higher
 - Required modules: os, shutil, time (all included in the Python standard library)
+
+## Code Overview
+- folder_mappings Dictionary: Maps file extensions to corresponding folder names.
+- Folder Creation: Creates folders for each file type if they don’t already exist.
+- sort_files() Function:
+  - Scans the directory and identifies files based on their extensions.
+  - Moves each file to the corresponding folder based on the extension defined in folder_mappings.
+  - Prints a message indicating the success or status of each move.
+- 3-Hour Timer: The script pauses for 3 hours (time.sleep(3 * 60 * 60)) after each sorting cycle to ensure it runs periodically.
