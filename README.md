@@ -10,3 +10,12 @@ This Python script automates the organization of files within a specified direct
 ## Notes
 - The script skips items that are not files (e.g., folders) and files with unrecognized extensions.
 - This script will run indefinitely, so it’s recommended to execute it in an environment that allows continuous running, such as a background process or task scheduler.
+
+## Folder Structure
+The script sorts files into the following folders by default:
+
+- csv files: For .csv files
+- image files: For .png files
+- text files: For .txt files  
+
+If additional file types need to be sorted, users can add new folder mappings by modifying the folder_mappings dictionary in the script.
