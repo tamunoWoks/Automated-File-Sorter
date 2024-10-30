@@ -19,3 +19,7 @@ The script sorts files into the following folders by default:
 - text files: For .txt files  
 
 If additional file types need to be sorted, users can add new folder mappings by modifying the folder_mappings dictionary in the script.
+
+## Requirements
+- Python 3.6 or higher
+- Required modules: os, shutil, time (all included in the Python standard library)
