@@ -22,3 +22,15 @@ def sort_files():
     # List all items in the directory
     for item in os.listdir(path):
         item_path = os.path.join(path, item)
+
+        # Only process if it's a file
+        if os.path.isfile(item_path):
+            # Check the file extension and move to the corresponding folder
+            file_ext = os.path.splitext(item)[1]
+            if file_ext in folder_mappings:
+                dest_folder = os.path.join(path, folder_mappings[file_ext])
+                shutil.move(item_path, os.path.join(dest_folder, item))
+                print(f"Moved: {item} to {folder_mappings[file_ext]}")
+            else:
+                print(f"Skipped (no matching folder): {item}")
+
