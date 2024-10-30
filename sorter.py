@@ -34,3 +34,9 @@ def sort_files():
             else:
                 print(f"Skipped (no matching folder): {item}")
 
+# Run the sort_files function every 3 hours
+while True:
+    sort_files()
+    print("Files sorted. Next sort in 3 hours.")
+    # Wait for 3 hours (3 * 60 * 60 seconds)
+    time.sleep(3 * 60 * 60)
