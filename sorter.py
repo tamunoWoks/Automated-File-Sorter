@@ -16,3 +16,9 @@ for folder in folder_mappings.values():
     folder_path = os.path.join(path, folder)
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
+
+# Function to sort files
+def sort_files():
+    # List all items in the directory
+    for item in os.listdir(path):
+        item_path = os.path.join(path, item)
